@@ -6,6 +6,13 @@ if (isset($_REQUEST['pagar']))
   $matricula=$_REQUEST['matricula'];
   $fecha=$_REQUEST['fecha_hora'];
   //$pagada=$_REQUEST['pagada'];
+  foreach($_SESSION['multas']as $clave=>$valor)
+  {
+    if($valor['matricula']==$matricula)
+    {
+      $_SESSION['multas'][$clave]['pagada']='SI';
+    }
+  }
   echo $fecha;
   echo 'La multa '.$matricula.' esta pagada';
 }
