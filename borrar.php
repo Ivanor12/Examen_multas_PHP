@@ -2,11 +2,11 @@
 session_start();
 include 'head.php';
 $contador=0;
-if(isset($_REQUEST['borrar']))
+if(isset($_REQUEST['borrar']))//si he pulsado borrar
 {
   $matricula=$_REQUEST['matricula'];
   $fecha_hora=$_REQUEST['fecha_hora'];
-  $contador=$matricula.' '.$fecha_hora;
+  $contador=$matricula and $fecha_hora;
   $contador_antes=count($_SESSION['multas']);
   unset($_SESSION['multas'][$contador]);
   $contador_despues=count($_SESSION['multas']);

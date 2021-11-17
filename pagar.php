@@ -4,8 +4,8 @@ include 'head.php';
 if (isset($_REQUEST['pagar']))
 {
   $matricula=$_REQUEST['matricula'];
-  $fecha= $_REQUEST['fecha_hora'];
-  $pagada=$_REQUEST['pagada'];
+  $fecha=$_REQUEST['fecha_hora'];
+  //$pagada=$_REQUEST['pagada'];
   echo $fecha;
   echo 'La multa '.$matricula.' esta pagada';
 }

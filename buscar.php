@@ -6,12 +6,10 @@ if(isset($_REQUEST['buscar']))//si he pulsado buscar
   $matricula=$_REQUEST['matricula'];
   $buscar=false;
   foreach($_SESSION['multas'] as $clave)
-    {
-    if($clave['matricula'] ==$matricula)
+  {
+    if($clave['matricula']==$matricula)
       {
-      echo '<br>';
       echo 'Multa con matricula ('.$matricula.')';
-      echo '<br>';
       $buscar=true;
       }
     }
