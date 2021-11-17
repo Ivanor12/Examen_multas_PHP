@@ -3,15 +3,17 @@
 include 'head.php';
 if (isset($_REQUEST['pagar']))
 {
+  $matricula=$_REQUEST['matricula'];
   $fecha= $_REQUEST['fecha_hora'];
+  $pagada=$_REQUEST['pagada'];
   echo $fecha;
- 
+  echo 'La multa '.$matricula.' esta pagada';
 }
 
 echo' 
 Introduce los datos de la Multa a Pagar <mark>(1.5 Puntos)<br><br>
                          
-<div   class="postcontent"><form action="" method="post">
+<div   class="postcontent"><form action="pagar.php" method="post">
 <table align="center" class="content-layout">
   
   

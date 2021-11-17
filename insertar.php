@@ -7,7 +7,7 @@ if(isset($_REQUEST['insertar']))//si he pulsado el boton insertar
   $radar=$_REQUEST['identificador'];
   $velocidad=$_REQUEST['velocidad'];
   $fecha_hora=$_REQUEST['fecha_hora'];
-  $_SESSION['multas']=array($matricula,$radar,$velocidad,$fecha_hora);
+  $_SESSION['multas'][]=array($matricula,$radar,$velocidad,$fecha_hora);
       echo'<pre>';
       var_dump($_SESSION['multas']);//para que me muestre el array creado multas
       echo '</pre>';

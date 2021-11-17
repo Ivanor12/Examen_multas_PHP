@@ -1,11 +1,10 @@
 <?php
-include 'head.php';
 session_start();
-
+include 'head.php';
 
 echo'<img src = "images/multa.jpg" width = "820" height = "350" alt = "multas-trafico"/>';
 
-$multas = array(
+$multas[] = array(
 		array(
 			'matricula' => '1111BBB',
 			'radar' => 1,
