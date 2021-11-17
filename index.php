@@ -4,7 +4,7 @@ include 'head.php';
 
 echo'<img src = "images/multa.jpg" width = "820" height = "350" alt = "multas-trafico"/>';
 
-$multas[] = array(
+$multas = array(
 		array(
 			'matricula' => '1111BBB',
 			'radar' => 1,
@@ -47,6 +47,7 @@ $multas[] = array(
 		),
                 
     );
+	$multas=$_SESSION['multas'];
 //array radares con su identificacion y limite maximo permitido de velocidad
 $radares=array("Radar 1"=>30,"Radar 2"=>50,"Radar 3"=>90,"Radar 4"=>100);
 

@@ -1,23 +1,20 @@
 <?php
 session_start();
 include 'head.php';
-if(isset($_REQUEST['borrar']))//si he pulsado borrar
+$contador=0;
+if(isset($_REQUEST['borrar']))
 {
-    $matricula=$_REQUEST['matricula'];
-    $contador_antes=count($_SESSION['multas']);
-    unset($_SESSION['multas'][$matricula]);
-    $contador_despues=count($_SESSION['multas']);
-    if($contador_antes==$contador_despues)
-    {
-        echo '<script>alert("No existe la multa");</script>';
-    }
-    else{
-      unset($_SESSION['multas'][$matricula]);
+  $matricula=$_REQUEST['matricula'];
+  $fecha_hora=$_REQUEST['fecha_hora'];
+  $contador=$matricula.' '.$fecha_hora;
+  $contador_antes=count($_SESSION['multas']);
+  unset($_SESSION['multas'][$contador]);
+  $contador_despues=count($_SESSION['multas']);
+  if($contador_antes==$contador_despues)
+  {
+    echo 'la multa no existe';
   }
-  echo '<pre>';
-  var_dump($_SESSION['multas']);
-  echo '</pre>';
-}                    
+}       
 echo' 
 Introduce los datos de la Multa a Borrar<mark>(1.5 Puntos)<br><br>
                          
