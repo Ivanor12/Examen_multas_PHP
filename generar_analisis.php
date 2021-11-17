@@ -2,17 +2,9 @@
 session_start();
 include 'head.php';
 var_dump($_SESSION['radares']);
-
 if(isset($_REQUEST['listar']))
 {
   $radar=$_REQUEST['identificador'];
-  echo '<table> 
-    <tr>
-        <th>Radar 1</th>
-        <th>Radar 2</th>
-        <th>Radar 3</th>
-        <th>Radar 4</th>
-    </tr>';
   foreach($_SESSION['radares'] as $clave=>$valor)
   {
     if($valor[2]==$radar)

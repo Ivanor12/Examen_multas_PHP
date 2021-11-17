@@ -1,15 +1,27 @@
 <?php
 session_start();
 include 'head.php';
-if(isset($_REQUEST['buscar']))
+if(isset($_REQUEST['buscar']))//si he pulsado buscar
 {
   $matricula=$_REQUEST['matricula'];
-  $clave=array_search('multas');
-  echo '<pre>';
-  var_dump($_SESSION['multas']);
-  echo '</pre>';
-  //echo $clave;
+  echo '<table> 
+    <tr>
+        <th>Matricula</th>
+    </tr>';
+  foreach($_SESSION['multas'] as $clave=>$valor)
+{
+   
+      echo '<tr>
+        <td>'.$clave.' </td>         
+      </tr>';
+    
+  }
+ echo '</table>';
 }
+else{
+    echo "no existe esa la multa";
+}
+echo '</table>';
 echo' 
 Introduce la Matricula de la Multa/s <mark> NO PAGADAS</mark> a Buscar<mark>(1 Puntos)<br><br>
                          
